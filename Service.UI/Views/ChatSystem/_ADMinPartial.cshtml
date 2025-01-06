@@ -1,0 +1,57 @@
+﻿@model List<ChatSystemModel>
+
+
+<div class="chat-conversation-box">
+    <div id="chat-conversation-box-scroll" class="chat-conversation-box-scroll">
+
+        <div class="chat" data-chat="person6">
+            <div class="conversation-start">
+                <span>Monday, 1:27 PM</span>
+            </div>
+            <div class="bubble you" id="UserMessage">
+                @* Hi, I am back from vacation*@
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="bubble me" class="messages-list" id="messagesList">
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            @item.Message
+                        </td>
+                    </tr>
+                </table>
+            }
+
+
+        </div>
+
+        <div class="chat" data-chat="person12">
+            <div class="conversation-start">
+                <span>Monday, 1:27 PM</span>
+            </div>
+            <div class="bubble you" id="UserMessage">
+                @* Hi, I am back from vacation*@
+            </div>
+            <div class="bubble me" class="messages-list" id="messagesList">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="chat-footer">
+    <div class="chat-input">
+        @* <form class="chat-form" action="javascript:void(0);" onsubmit="sendMessage(); return false;"  >*@
+        <form class="chat-form" action="#">
+            <div class="chat-input-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <input id="messageInput" type="text" class="mail-write-box form-control" placeholder="Message" @*onkeypress="checkEnter(event)" *@ />
+                <button type="button" onclick="sendMessage()" class="send-button">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

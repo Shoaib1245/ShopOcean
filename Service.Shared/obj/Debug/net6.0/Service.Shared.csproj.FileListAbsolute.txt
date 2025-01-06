@@ -1,0 +1,12 @@
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\bin\Debug\net6.0\Service.Shared.deps.json
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\bin\Debug\net6.0\Service.Shared.dll
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\bin\Debug\net6.0\Service.Shared.pdb
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\Service.Shared.csproj.AssemblyReference.cache
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\Service.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\Service.Shared.AssemblyInfoInputs.cache
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\Service.Shared.AssemblyInfo.cs
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\Service.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\Service.Shared.dll
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\refint\Service.Shared.dll
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\Service.Shared.pdb
+C:\Users\Joher\source\repos\ShopOcean\Service.Shared\obj\Debug\net6.0\ref\Service.Shared.dll

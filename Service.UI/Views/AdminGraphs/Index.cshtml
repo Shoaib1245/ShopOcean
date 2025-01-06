@@ -1,0 +1,359 @@
+﻿@using Service.Shared.DTOs;
+@model AdminGraphsDTOs
+@{
+
+    Layout = "~/Views/Shared/_AdminLayoutt.cshtml";
+}
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+<link href="/AdminAssets/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+<link href="/AdminAssets/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+<!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+<style>
+    .apexcharts-canvas {
+        margin: 0 auto;
+    }
+
+    .apexcharts-title-text {
+        fill: #e0e6ed;
+    }
+
+    .apexcharts-yaxis-label {
+        fill: #e0e6ed;
+    }
+
+    .apexcharts-xaxis-label {
+        fill: #e0e6ed;
+    }
+
+    .apexcharts-legend-text {
+        color: #e0e6ed !important;
+    }
+
+    .apexcharts-radialbar-track.apexcharts-track .apexcharts-radialbar-area {
+        stroke: #191e3a;
+    }
+
+    .apexcharts-pie-label, .apexcharts-datalabel, .apexcharts-datalabel-label, .apexcharts-datalabel-value {
+        fill: #bfc9d4;
+    }
+</style>
+
+<div class="container">
+    <div class="container">
+
+        <div id="navSection" data-spy="affix" class="nav sidenav">
+            <div class="sidenav-content">
+                <a href="#chartArea" class="nav-link">Area</a>
+                <a href="#chartColumn" class="nav-link">Column</a>
+                <a href="#chartBar" class="nav-link">Bar</a>
+                <a href="#chartMixed" class="nav-link">Mixed</a>
+                <a href="#chartDonut" class="nav-link">Donut</a>
+                <a href="#chartRadial" class="nav-link">Radial</a>
+            </div>
+        </div>
+
+        <div class="row" id="cancel-row">
+
+
+            <div id="chartBar" class="col-xl-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Simple Bar</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area">
+                        <div id="s-bar" class=""></div>
+
+                        <div class="code-section-container">
+
+                            <button class="btn toggle-code-snippet"><span>Code</span></button>
+
+                            <div class="code-section text-left">
+                                <pre>
+var sBar = {
+    chart: {
+        height: 350,
+        type: 'bar',
+        toolbar: {
+          show: false,
+        }
+    },
+    plotOptions: {
+        bar: {
+            horizontal: true,
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    series: [{
+        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+    }],
+    xaxis: {
+        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
+    }
+}
+
+var chart = new ApexCharts(
+    document.querySelector("#s-bar"),
+    sBar
+);
+
+chart.render();</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chartDonut" class="col-xl-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Donut</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area">
+                        <div id="donut-chart" class=""></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sellers Radial Chart -->
+
+
+            <div id="chartRadial" class="col-xl-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Radial</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area">
+                      
+                        <div id="seller-radial-chart"></div>
+
+                        <div class="code-section-container">
+
+                            <button class="btn toggle-code-snippet"><span>Code</span></button>
+
+                            <div class="code-section text-left">
+                                <pre>
+var radialChart = {
+    chart: {
+        height: 350,
+        type: 'radialBar',
+        toolbar: {
+          show: false,
+        }
+    },
+    plotOptions: {
+        radialBar: {
+            dataLabels: {
+                name: {
+                    fontSize: '22px',
+                },
+                value: {
+                    fontSize: '16px',
+                },
+                total: {
+                    show: true,
+                    label: 'Total',
+                    formatter: function (w) {
+                        // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                        return 249
+                    }
+                }
+            }
+        }
+    },
+    series: [44, 55, 67, 83],
+    labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],    
+}
+
+var chart = new ApexCharts(
+    document.querySelector("#radial-chart"),
+    radialChart
+);
+
+chart.render();</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+<script src="/AdminAssets/assets/js/scrollspyNav.js"></script>
+<script src="/AdminAssets/plugins/apex/apexcharts.min.js"></script>
+<script src="/AdminAssets/plugins/apex/custom-apexcharts.js"></script>
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+
+
+<script>
+    // Make sure `baseConfig` is defined somewhere in your project.
+    // If you are using specific defaults, replace `baseConfig` with them.
+
+    var baseConfig = {
+        chart: {
+            height: 350,
+            type: 'donut',
+            toolbar: {
+                show: false
+            }
+        }
+    };
+
+    // Category Chart Configuration
+    var categoryChartConfig = {
+        ...baseConfig,
+        colors: ['#4169E1', '#FFD700', '#228B22', '#FF69B4'],  // Define your chart colors
+        labels: ['Total Product', 'Zero', 'Active', 'Inactive'],  // Add labels for the chart segments
+        series: [@Model.TotalProduct, 0, @Model.ActiveProduct, @Model.InActiveProduct], // Pull data from your model
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    };
+
+    // Initialize and render the chart
+    var categoryChart = new ApexCharts(document.querySelector("#donut-chart"), categoryChartConfig);
+    categoryChart.render();
+
+
+
+
+    var sellerRadialChart = {
+        chart: {
+            height: 350,
+            type: 'radialBar',
+            toolbar: { show: false }
+        },
+        plotOptions: {
+            radialBar: {
+                dataLabels: {
+                    name: { fontSize: '22px' },
+                    value: { fontSize: '16px' },
+                    total: {
+                        show: true,
+                        label: 'Total Sellers',
+                        formatter: function () { return @Model.TotalSeller || 0; }
+                    }
+                }
+            }
+        },
+        series: [@Model.ActiveSeller || 0, @Model.PendingSeller || 0, @Model.RejectedSeller || 0],
+        labels: ['Active', 'Pending', 'Rejected'],
+    };
+
+    var sellerChart = new ApexCharts(document.querySelector("#seller-radial-chart"), sellerRadialChart);
+    sellerChart.render();
+</script>
+
+@*
+<!-- Sellers Radial Chart -->
+<div id="chartSellerRadial" class="col-xl-6 layout-spacing">
+    <div class="statbox widget box box-shadow">
+        <div class="widget-header">
+            <h4>Sellers Status</h4>
+        </div>
+        <div class="widget-content widget-content-area">
+            <div id="seller-radial-chart"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Customers Radial Chart -->
+<div id="chartCustomerRadial" class="col-xl-6 layout-spacing">
+    <div class="statbox widget box box-shadow">
+        <div class="widget-header">
+            <h4>Customers Status</h4>
+        </div>
+        <div class="widget-content widget-content-area">
+            <div id="customer-radial-chart"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="/AdminAssets/plugins/apex/apexcharts.min.js"></script>
+
+<script>
+   
+    // Sellers Radial Chart
+    var sellerRadialChart = {
+        chart: {
+            height: 350,
+            type: 'radialBar',
+            toolbar: { show: false }
+        },
+        plotOptions: {
+            radialBar: {
+                dataLabels: {
+                    name: { fontSize: '22px' },
+                    value: { fontSize: '16px' },
+                    total: {
+                        show: true,
+                        label: 'Total Sellers',
+                        formatter: function () { return @Model.TotalSeller || 0; }
+                    }
+                }
+            }
+        },
+        series: [@Model.ActiveSeller || 0, @Model.PendingSeller || 0, @Model.RejectedSeller || 0],
+        labels: ['Active', 'Pending', 'Rejected'],
+    };
+
+    var sellerChart = new ApexCharts(document.querySelector("#seller-radial-chart"), sellerRadialChart);
+    sellerChart.render();
+
+    // Customers Radial Chart
+    var customerRadialChart = {
+        chart: {
+            height: 350,
+            type: 'radialBar',
+            toolbar: { show: false }
+        },
+        plotOptions: {
+            radialBar: {
+                dataLabels: {
+                    name: { fontSize: '22px' },
+                    value: { fontSize: '16px' },
+                    total: {
+                        show: true,
+                        label: 'Total Customers',
+                        formatter: function () { return @Model.TotalCustomer || 0; }
+                    }
+                }
+            }
+        },
+        series: [@Model.ActiveCustomer || 0, @Model.PendingCustomer || 0, @Model.ShippedCustomer || 0],
+        labels: ['Active', 'Pending', 'Shipped'],
+    };
+
+    var customerChart = new ApexCharts(document.querySelector("#customer-radial-chart"), customerRadialChart);
+    customerChart.render();
+</script>*@
+

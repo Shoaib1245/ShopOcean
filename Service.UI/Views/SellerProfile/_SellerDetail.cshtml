@@ -1,0 +1,75 @@
+﻿@model Service.UI.Models.SellerModel
+
+<form id="formsavee" class="row g-3">
+    @Html.HiddenFor(a => a.Id)
+    <div class="col-md-12">
+        <label for="inputEmail4" class="form-label">First Name @Html.ValidationMessageFor(a => a.Name, null, new { @class = "text-danger" })</label>
+        @Html.TextBoxFor(a => a.Name, new { @class = "form-control", placeholder = "Name" })
+    </div>
+    <div class="col-6">
+        <label for="inputAddress" class="form-label">Cnic @Html.ValidationMessageFor(a => a.Cnic, null, new { @class = "text-danger" })</label>
+        @Html.TextBoxFor(a => a.Cnic, new { @class = "form-control", placeholder = "Cnic" })
+    </div>
+    <div class="col-6">
+        <label for="inputAddress2" class="form-label">Contact @Html.ValidationMessageFor(a => a.Contact, null, new { @class = "text-danger" })</label>
+        @Html.TextBoxFor(a => a.Contact, new { @class = "form-control", placeholder = "Contact" })
+    </div>
+    <div class="col-md-6">
+        <label for="inputCity" class="form-label">Date of Birth @Html.ValidationMessageFor(a => a.DOB, null, new { @class = "text-danger" })</label>
+
+        @Html.TextBoxFor(a => a.DOB, new { @class = "form-control", type = "date" })
+    </div>
+    <div class="col-md-6">
+        <label for="inputCity" class="form-label">Email @Html.ValidationMessageFor(a => a.Email, null, new { @class = "text-danger" })</label>
+        @Html.TextBoxFor(a => a.Email, new { @class = "form-control", placeholder = "Email" })
+    </div>
+    <div class="col-md-12">
+        <label for="inputZip" class="form-label">Address @Html.ValidationMessageFor(a => a.Address, null, new { @class = "text-danger" })</label>
+        @Html.TextBoxFor(a => a.Address, new { @class = "form-control", placeholder = "Address" })
+    </div>
+   
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Check me out
+            </label>
+        </div>
+    </div>
+    <div class="col-12" style="margin-bottom:20px">
+        <input type="submit" class="btn btn-primary" value="Update data" />
+    </div>
+</form>
+<script src="~/assets/jquery.js"></script>
+
+<script>
+    $(document).ready(function () {
+        Save();
+    })
+    function Save() {
+        $('#formsavee').submit(function (event) {
+            debugger;
+            event.preventDefault();
+                var formdata = new FormData(document.getElementById('formsavee'));
+                $.ajax({
+                    type: 'Post',
+                    url: '/SellerProfile/DetailUpdate',
+                    processData: false,
+                    contentType: false,
+                    data: formdata,
+                    success: function (res) {
+                        if (res == 1) {
+                            SellerProfile();
+                            toastr.success("Data Has been Successfully Updated");
+
+                        }
+                        else {
+                            toastr.error("Data are not Updated")
+                        }
+                    }
+                })
+            
+        })
+    }
+</script>
+

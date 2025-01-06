@@ -1,0 +1,6 @@
+﻿@model Service.UI.Models.ProductModel
+
+<p class="d-flex align-items-center"><span class="prev-price">$@Model.Prices</span>
+    <span class="price">$@(Math.Round(Convert.ToDecimal(Model.Prices) * (1 - (Convert.ToDecimal(Model.Discount / 100m))), 2))</span>
+    <span class="saving-price">save @Model.Discount%</span></p>
+

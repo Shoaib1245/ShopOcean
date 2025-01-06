@@ -1,0 +1,49 @@
+﻿@model List<WishList>
+<table>
+    <thead>
+        <tr>
+            <th class="product-remove">Remove</th>
+            <th class="product-thumbnail">Image</th>
+            <th class="product-name">Product</th>
+            <th class="product-price">Unit Price</th>
+            <th class="product-quantity">Discount</th>
+            <th class="product-subtotal">add to cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="product-remove"> <a href="#" onclick="DeletebyId(@item.Id)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                <td class="product-thumbnail">
+                    <a href="#"><img height="119" width="119" src="@item.Image.Split(',')[0]" alt="cart-image" /></a>
+                </td>
+                <td class="product-name"><a href="#">@item.ProductName</a></td>
+                <td class="product-price"><span class="amount">@item.Price</span></td>
+                <td class="product-stock-status"><span>@item.Discount</span></td>
+                <td class="product-add-to-cart"><a href="/ProductDetail/Index?id=@item.ProductId">add to cart</a></td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<script>
+
+    function DeletebyId(id) {
+        $.ajax({
+            type: 'get',
+            url: '/WishList/Delete',
+            data: { id: id },
+            success: function (res) {
+                if (res == 1) {
+                    WishList();
+                    toastr.error("Data has been successfully Deleted!");
+                } else {
+                    toastr.error("Data not Deleted.");
+                }
+
+            }
+        })
+    }
+</script>

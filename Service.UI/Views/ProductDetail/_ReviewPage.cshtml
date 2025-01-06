@@ -1,0 +1,70 @@
+﻿@model Service.UI.Models.ReviewAndComments
+<!-- Add Review Form Start -->
+<div class="review-form border-default universal-padding mt-30">
+    <h2 class="review-title mb-30">Leave a Review</h2>
+    <form autocomplete="off" id="CommentsSave" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="req" for="nickname">CustomerName</label>
+            <input asp-for="CustomerName" type="text" class="form-control" id="nickname" required="required">
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="req" for="rating">Your Rating</label>
+            <select asp-for="Rating" class="form-control star-dropdown" id="rating" required="required">
+                <option value="5">★★★★★</option> <!-- 5 stars -->
+                <option value="4">★★★★☆</option> <!-- 4 stars -->
+                <option value="3">★★★☆☆</option> <!-- 3 stars -->
+                <option value="2">★★☆☆☆</option> <!-- 2 stars -->
+                <option value="1">★☆☆☆☆</option> <!-- 1 star -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="req" for="comments">Comments</label>
+            <textarea asp-for="Comments" class="form-control" rows="5" id="comments" required="required"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="req" for="product-image">Upload Product Image</label>
+            <input type="file" asp-for="ImageUrl" class="form-control" id="product-image">
+        </div>
+        <button type="submit" class="customer-btn">Submit Review</button>
+    </form>
+</div>
+<!-- Add Review Form End -->
+
+
+
+<script>
+    $(document).ready(function () {
+        ReviewSave();
+    })
+    function ReviewSave() {
+        $('#CommentsSave').submit(function (event) {
+            debugger;
+            event.preventDefault();
+            var formdata = new FormData(this);
+
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("CommentsSave", "ProductDetail")',
+                data: formdata,
+                processData: false,
+                contentType: false,
+                success: function (res) {
+                    if (res == 1) {
+                        toastr.success("Comments has been successfully Saved!");
+                        ReviewShow();
+                    }
+                    else if (res == 2) {
+                        window.location.href = "/CustomerRegistration/CustomerLogin";
+                    }
+                    else{
+                        toastr.error("Comments not Saved!");
+                    }
+                }
+
+            })
+        })
+    }
+</script>

@@ -1,0 +1,132 @@
+﻿@model List<OrderDataModel>
+
+@{
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+}
+
+<div class="layout-px-spacing">
+
+    <div class="middle-content container-xxl p-0">
+
+        <!-- BREADCRUMB -->
+        <div class="page-meta">
+            <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Datatables</a></li>
+                </ol>
+            </nav>
+        </div>
+        <!-- /BREADCRUMB -->
+
+        <div class="seperator-header">
+        </div>
+
+        <div class="row layout-spacing">
+            <div class="col-lg-12">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-content widget-content-area">
+
+                        <table id="Style33" class="table style-3 dt-table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Image</th>
+                                    <th>Customer Name</th>
+                                    <th>ZipCode</th>
+                                    <th>DateTime</th>
+                                    <th>Address</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Invoice</th>
+                                    <th class="text-center dt-no-sorting">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td class="text-center">
+                                            <span><img src="@item.Image" class="profile-img" alt="avatar"></span>
+                                        </td>
+                                        <td>@item.CustomerName</td>
+                                        <td>@item.ZipCode</td>
+                                        <td>@item.OrderDate</td>
+                                        <td>@item.Address</td>
+                                        @if (item.Status == 1)
+                                        {
+                                        <td class="text-center"><span class="shadow-none badge badge-warning">Suspended</span></td>
+                                        }
+                                        else if (item.Status == 2)
+                                        {
+                                            <td class="text-center"><span class="shadow-none badge badge-primary">Approved</span></td>
+                                        }
+
+                                        else if (item.Status == 3)
+                                        {
+                                            <td class="text-center"><span class="shadow-none badge badge-success">Shipped</span></td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-center"><span class="shadow-none badge badge-danger">Rejected</span></td>
+                                        }
+                                        <td><a href="/Invoice/Index?OrderId=@item.OrderId">Invoice</a></td>
+                                        <td class="text-center">
+                                            <select class="btn btn-secondary" onchange="changeStatus(@item.Id,'@item.Email', '@item.CustomerName',this.value)">
+                                                <option value="1">Pending</option>
+                                                <option value="2">Accept</option>
+                                                <option value="3" >Shipped</option>
+                                                <option value="4">Reject</option>
+                                            </select>
+                                        </td>
+                                 
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Include CSS files for DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+
+<!-- Include JavaScript files for DataTables -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#Style33').DataTable();
+    })
+
+    function changeStatus(id, Email, CustomerName, status) {
+        debugger;
+        $.ajax({
+            type: "POST",
+            url: "/OrderDetail/ChangeStatus",
+            data: { Id: id, Status: status, Email: Email, customername: CustomerName },
+            success: function (result) {
+                if (result == 1) {
+                    toastr.success("Status changed successfully");
+                } else {
+                    alert("Failed to change status");
+                }
+            }
+        });
+    }
+
+</script>
+
+
+
+

@@ -1,0 +1,271 @@
+﻿@model Service.Shared.DTOs.SellerLoginDTO
+@{
+    Layout = null;
+}
+<style>
+    /* Spinner CSS */
+    .spinner {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        margin-left: auto;
+        margin-top: 300px;
+        margin-right: auto;
+        margin-bottom: auto;
+    }
+
+    /* Centering the loader using Flexbox */
+    #loader {
+        position: fixed;
+        z-index: 999;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Initially hidden */
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>SignIn Boxed | CORK - Multipurpose Bootstrap Dashboard Template </title>
+    <link rel="icon" type="image/x-icon" href="/SellerAssets/src/assets/img/favicon.ico" />
+    <link href="/SellerAssets/layouts/modern-light-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
+    <link href="/SellerAssets/layouts/modern-light-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
+    <script src="/SellerAssets/layouts/modern-light-menu/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="/SellerAssets/src/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="/SellerAssets/layouts/modern-light-menu/css/light/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/SellerAssets/src/assets/css/light/authentication/auth-boxed.css" rel="stylesheet" type="text/css" />
+
+    <link href="/SellerAssets/layouts/modern-light-menu/css/dark/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="/SellerAssets/src/assets/css/dark/authentication/auth-boxed.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <link href="~/assets/tos.css" rel="stylesheet" />
+
+
+</head>
+<body class="form">
+    <!-- Loader Div -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOADER -->
+
+    <div class="auth-container d-flex">
+
+        <div class="container mx-auto align-self-center">
+
+            <div class="row">
+
+                <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center mx-auto">
+                    <div class="card mt-3 mb-3">
+                        <div class="card-body">
+                            <form  id="Loginfrm" enctype="multipart/form-data" method="post">
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+
+                                        <h2>Login</h2>
+                                        <p>Enter your email and password to login</p>
+
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Email <span class="text-danger" id="ctorEmail"></span></label>
+                                            <input asp-for="Email" type="email" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-4">
+                                            <label class="form-label">Password <span class="text-danger" id="ctorPassword"></span></label>
+                                            <input asp-for="Password" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <div class="form-check form-check-primary form-check-inline">
+                                                <label class="form-check-label" for="form-check-default">
+                                                    
+                                                    <a href="#" onclick="ForgetPass()">Forget Password</a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="mb-4">
+                                            <button type="submit" class="btn btn-secondary w-100">SIGN IN</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        <div class="">
+                                            <div class="seperator">
+                                                <hr>
+                                                <div class="seperator-text"> <span>Or continue with</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-12">
+                                        <div class="mb-4">
+                                            <button class="btn  btn-social-login w-100 ">
+                                                <img src="/SellerAssets/src/assets/img/google-gmail.svg" alt="" class="img-fluid">
+                                                <span class="btn-text-inner">Google</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-12">
+                                        <div class="mb-4">
+                                            <button class="btn  btn-social-login w-100">
+                                                <img src="/SellerAssets/src/assets/img/github-icon.svg" alt="" class="img-fluid">
+                                                <span class="btn-text-inner">Github</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-12">
+                                        <div class="mb-4">
+                                            <button class="btn  btn-social-login w-100">
+                                                <img src="/SellerAssets/src/assets/img/twitter.svg" alt="" class="img-fluid">
+                                                <span class="btn-text-inner">Twitter</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <p class="mb-0">Dont't have an account ? <a href="/Login/Signup" class="text-warning">Sign Up</a></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </form>
+                           
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="/SellerAssets/src/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/sellerassets/src/plugins/src/jquery-ui/jquery-ui.min.js"></script>
+<script src="~/assets/jquery.js"></script>
+<script src="~/assets/toaster.js"></script>
+<script>
+    $(document).ready(function(){
+        toastr.info('If your account already exists, then simply login. Otherwise, <a href="/Login/Signup">Signup here</a>.');
+        SellerLogin();
+    });
+   function SellerLogin(){
+        $('#Loginfrm').submit(function(event){
+            debugger;
+            event.preventDefault();
+            var formdata = new FormData(this); 
+          
+            if (Validation()) {
+                $("#loader").show();
+            $.ajax({
+                type: 'POST', 
+                url: '@Url.Action("LoginData", "Login")',
+                data: formdata, 
+                processData:false,
+                contentType:false,
+                success:function(res){
+                    if (res == 1) {
+                        toastr.success("Data has been successfully Matched");
+                        window.location.href="/SellerProfile/Index";
+                    } else {
+                        toastr.error("NOT Matched");
+                        $("#loader").hide();
+                    }
+                }
+            })
+            }
+        })
+   }
+
+
+
+
+
+    function ForgetPass() {
+       debugger;
+       var Email=$('#Email').val();
+       $.ajax({
+           type:'Post',
+            url: '@Url.Action("Forgetdata", "Login")',
+            data: { Email: Email },
+            success: function (res) {
+                if (res == 1) {
+                    window.location.href = "/Login/LoginVerification";
+                }
+            }
+       })
+   }
+
+
+    function Validation() {
+        debugger
+        var isValid = true;
+        $('form').find('input:not([type="hidden"])').each(function () {
+            debugger
+            var value = $(this).val();
+            var name = $(this).attr('name');
+
+            $('#ctor' + name).text('');
+
+            if (value == "" && name !== undefined) {
+
+                $('#ctor' + name).text(name + ' is required, please fill it.');
+                isValid = false;
+            }
+
+        });
+
+        return isValid;
+    }
+
+
+
+
+
+
+</script>

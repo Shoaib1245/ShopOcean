@@ -1,0 +1,305 @@
+﻿@model Service.UI.Models.ProductModel
+@using Newtonsoft.Json;
+@using Service.UI.Utilize
+@inject IApiService _obj;
+@inject HttpContextAccessor _httpcontextaccessor;
+@{    
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+    var sellerid = _httpcontextaccessor.HttpContext.Session.GetString("SellerId");
+    var jsondata = await _obj.GetByIdAsync("Category/DataGET", Convert.ToInt16(sellerid));
+    var cat = JsonConvert.DeserializeObject<List<CategoryModel>>(jsondata);
+
+}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5;
+        color: #333;
+    }
+
+    .breadcrumb-style-one .breadcrumb-item a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .breadcrumb-style-one .breadcrumb-item a:hover {
+            text-decoration: underline;
+        }
+
+    .widget-content {
+        background-color: #ffffff;
+        border-radius: 0.375rem;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.125);
+        padding: 1.5rem;
+        border: 1px solid #dee2e6;
+    }
+
+    .widget-header {
+        background-color: #007bff;
+        color: #ffffff;
+        border-radius: 0.375rem;
+        padding: 1rem;
+    }
+
+        .widget-header a {
+            color: #ffffff;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        border-radius: 0.375rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        border-radius: 0.375rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .form-control {
+        border-radius: 0.375rem;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.125);
+        margin-bottom: 1rem;
+        border: 1px solid #ced4da;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 rgba(0, 123, 255, 0.25);
+        }
+
+    .form-check-input {
+        background-color: #ffffff;
+        border-color: #ced4da;
+    }
+
+        .form-check-input:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+    .dropify-wrapper .dropify-message p {
+        color: #495057;
+    }
+
+    .form-control::placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    .btn-primary, .btn-success {
+        position: relative;
+        overflow: hidden;
+    }
+
+        .btn-primary::before, .btn-success::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+
+        .btn-primary:hover::before, .btn-success:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+    .form-label {
+        color: #495057;
+    }
+
+    .form-check-label {
+        color: #495057;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="flLoginForm" class="col-lg-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row mb-3">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <a href="/Product/tabledata" class="btn btn-success float-end"><i class="fas fa-list"></i> Product List</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="widget-content widget-content-area">
+                        <form id="formdata" class="row g-3">
+                            @Html.HiddenFor(a => a.Id)
+                            <div class="col-md-6">
+                                <label for="CategoryId" class="form-label">Category Name <span class="text-danger" id="ctorCategoryId"></span></label>
+                                @Html.DropDownListFor(m => m.CategoryId, new SelectList(cat, "Id", "Name", "Select List"), new { @class = "form-control", onchange = "selectsubcat()" })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="SubCategoryId" class="form-label">SubCategory Name <span class="text-danger" id="ctorSubCategoryId"></span></label>
+                                @Html.DropDownListFor(a => a.SubCategoryId, new List<SelectListItem>
+                                {
+                                new SelectListItem { Text = "Select Sub Category", Value = "" }
+                                }, new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ProductName" class="form-label">Product Name <span class="text-danger" id="ctorProductName"></span></label>
+                                @Html.TextBoxFor(a => a.ProductName, new { @class = "form-control", placeholder = "Product Name" })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="BrandId" class="form-label">Brand <span class="text-muted">(Optional)</span></label>
+                                @Html.TextBoxFor(a => a.BrandId, new { @class = "form-control", placeholder = "Brand" })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ColorId" class="form-label">Color <span class="text-muted">(Optional)</span></label>
+                                @Html.TextBoxFor(a => a.ColorId, new { @class = "form-control", placeholder = "Color" })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Status" class="form-label">Status <span class="text-danger" id="ctorStatus"></span></label>
+                                @Html.DropDownListFor(a => a.Status, new List<SelectListItem>
+                                {
+                                new SelectListItem { Text = "Active", Value = "1" },
+                                new SelectListItem { Text = "In-Active", Value = "0" }
+                                }, "Select Status", new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="UnitId" class="form-label">Unit <span class="text-muted">(Optional)</span></label>
+                                @Html.TextBoxFor(a => a.UnitId, new { @class = "form-control", placeholder = "Unit" })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Discount" class="form-label">Discount <span class="text-muted">(Optional)</span></label>
+                                @Html.TextBoxFor(a => a.Discount, new { @class = "form-control", placeholder = "Discount" })
+                            </div>
+                            <div class="col-md-12">
+                                <label for="Description" class="form-label">Description <span class="text-danger" id="ctorDescription"></span></label>
+                                @Html.TextBoxFor(a => a.Description, new { @class = "form-control", placeholder = "Description" })
+                            </div>
+                            <div class="col-md-12">
+                                <label for="ImageUrl" class="form-label">Image <span id="MSGImageUrl" class="text-danger"></span></label>
+                                @Html.TextBoxFor(a => a.ImageUrl, new { @class = "form-control dropify", multiple = "true", type = "file" })
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">Check me out</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input type="submit" class="btn btn-primary w-100" value="Submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        Save();
+    });
+
+    function selectsubcat(){
+     
+        var catId = $('#CategoryId').val();
+        var Subcatid = $('#SubCategoryId');
+        
+        $.ajax({
+            type:'get',
+            url: '/SubCategory/Categorydata',
+            data:{catId:catId},
+            success:function(res){
+                debugger;
+                console.log(res);
+                Subcatid.empty();
+             
+                for (var i = 0; i < res.length; i++) {
+                    Subcatid.append(`<option value="${res[i].id}">${res[i].subCategoryName}</option>`);
+                }
+            }
+           
+        })
+    }
+
+    function Save() {
+        $('#formdata').submit(function (event) {
+            event.preventDefault();
+
+            $('#MSGImageUrl').text('');
+
+            if(Validation())
+            {
+                var formdata = new FormData(document.getElementById('formdata'));
+                $.ajax({
+                    type: 'Post',
+                    url: '/Product/Savedata',
+                    processData: false,
+                    contentType: false,
+                    data: formdata,
+                    success: function (result) {
+                        debugger;
+                        if (result == 1) {
+                            $('#MSGImageUrl').text();
+                            toastr.info("Data has been successfully Updated!");
+                        }
+                        else if (result == 2) {
+                            $('#MSGImageUrl').text('');
+                            toastr.success("Data has been successfully Saved!");
+                        }
+                        else {
+                            $('#MSGImageUrl').text('Upload Minimum 4 pictures of the product');
+                        }
+
+                    }
+                });
+            }
+        });
+    }
+
+    function Validation() {
+        debugger
+        var isValid = true;
+        ////select is for Dropdownlistfor
+        $('form').find('input:not([type="hidden"]),textarea,select').each(function () {
+            debugger
+            var value = $(this).val();
+            var name = $(this).attr('name');
+
+            if (name === "UnitId" || name === "ColorId" || name === "BrandId" || name === "Discount") {
+                return true; 
+            }
+            $('#ctor' + name).text('');
+
+            if (value == "" && name !== undefined) {
+
+                $('#ctor' + name).text(name + ' is required, please fill it.');
+                isValid = false;
+            }
+
+        });
+        return isValid;
+    }
+
+</script>

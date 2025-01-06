@@ -1,0 +1,50 @@
+﻿@model Service.UI.Models.SellerModel
+
+<form id="Imagedata" class="row g-3">
+    <div class="col-md-12">
+        <label for="inputCity" class="form-label">image</label>
+        @Html.TextBoxFor(a => a.ImageUrl, new{ @class = "form-control dropify", type = "file" @*, data_default_file = Model.Image*@})
+    </div>
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Check me out
+            </label>
+        </div>
+    </div>
+    <div class="col-12">
+        <input type="submit" class="btn btn-primary" value="Sign in" />
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        Save();
+    })
+    function Save() {
+
+        $('#Imagedata').submit(function (event) {
+            debugger;
+            event.preventDefault();
+            var formdata = new FormData(document.getElementById('Imagedata'));
+            $.ajax({
+                type: 'Post',
+                url: '/SellerProfile/ImageSave',
+                processData: false,
+                contentType: false,
+                data: formdata,
+                success: function (res) {
+                    if (res == 1) {
+                        SellerDetail();                      
+                        SellerProfile()
+                        toastr.success("Image Has been Successfully Updated")
+                    }
+                    else {
+                        toastr.error("Image are not Updated")
+                    }
+                }
+            })
+        })
+    }
+</script>
+

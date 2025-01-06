@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.FrontEnd.APIs\\wwwroot\\ShopOcean\\120730-OQ2KMK-949.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\120730-OQ2KMK-949.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.FrontEnd.APIs\\wwwroot\\ShopOcean\\126037-OR1F8F-831.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\126037-OR1F8F-831.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.FrontEnd.APIs\\wwwroot\\ShopOcean\\3.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.FrontEnd.APIs\\wwwroot\\ShopOcean\\front-view-wooden-spoons-with-pepper-shaker-dark-wall-photo-color-cuisine-seasoning-salt-food-cutlery_179666-17649.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\front-view-wooden-spoons-with-pepper-shaker-dark-wall-photo-color-cuisine-seasoning-salt-food-cutlery_179666-17649.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.FrontEnd.APIs\\wwwroot\\ShopOcean\\pexels-efrem-efre-2786187-27460906.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-efrem-efre-2786187-27460906.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.FrontEnd.APIs\\wwwroot\\ShopOcean\\pexels-farias-feijo-fotos-2910093-27874906.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-farias-feijo-fotos-2910093-27874906.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.FrontEnd.APIs\\wwwroot\\ShopOcean\\pexels-serhatturan-27626728.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-serhatturan-27626728.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Service.FrontEnd.APIs.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Service.FrontEnd.APIs.props",
+      "PackagePath": "build\\Service.FrontEnd.APIs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Service.FrontEnd.APIs.props",
+      "PackagePath": "buildMultiTargeting\\Service.FrontEnd.APIs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Service.FrontEnd.APIs.props",
+      "PackagePath": "buildTransitive\\Service.FrontEnd.APIs.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

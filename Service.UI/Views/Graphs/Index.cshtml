@@ -1,0 +1,181 @@
+﻿
+@model Service.Shared.DTOs.GraphsDTOs
+@{
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+}
+
+<link href="/SellerAssets/src/plugins/src/apex/apexcharts.css" rel="stylesheet" type="text/css">
+<link href="/SellerAssets/src/assets/css/light/scrollspyNav.css" rel="stylesheet" type="text/css" />
+<link href="/SellerAssets/src/plugins/css/light/apex/custom-apexcharts.css" rel="stylesheet" type="text/css">
+<link href="/SellerAssets/src/assets/css/dark/scrollspyNav.css" rel="stylesheet" type="text/css" />
+<link href="/SellerAssets/src/plugins/css/dark/apex/custom-apexcharts.css" rel="stylesheet" type="text/css">
+<!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+<div class="container">
+    <div class="container">
+        <!-- BREADCRUMB -->
+        <div class="page-meta">
+            <nav class="breadcrumb-style-one" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">User Interface</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Charts</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- /BREADCRUMB -->
+        <div id="navSection" data-bs-spy="affix" class="nav sidenav">
+            <div class="sidenav-content">
+                <a href="#chartDonut" class="active nav-link">Category</a>
+                <a href="#SchartDonut" class="nav-link">Sub Category</a>
+                <a href="#PchartDonut" class="nav-link">Product</a>
+
+            </div>
+        </div>
+
+
+        <div class="row" id="cancel-row">
+            <div id="chartDonut" class="col-xl-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Category Chart</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area">
+                        <div id="donut-chart" class=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="cancel-row">
+            <div id="SchartDonut" class="col-xl-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>SubCategory Chart</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area">
+                        <div id="subdonut-chart" class=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="cancel-row">
+            <div id="PchartDonut" class="col-xl-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Product Chart</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area">
+                        <div id="Proddonut-chart" class=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+<script src="/SellerAssets/src/assets/js/scrollspyNav.js"></script>
+<script src="/SellerAssets/src/plugins/src/apex/apexcharts.min.js"></script>
+<script>
+
+    var baseConfig = {
+        chart: {
+            fontFamily: 'Nunito, Arial, sans-serif',
+            height: 350,
+            type: 'donut',
+            toolbar: {
+                show: false
+            }
+        },
+        stroke: {
+            colors: '#e0e6ed'
+        },
+        legend: {
+            markers: {
+                width: 10,
+                height: 10,
+                offsetX: -5,
+                offsetY: 0
+            },
+            itemMargin: {
+                horizontal: 10,
+                vertical: 0
+            }
+        }
+    }
+
+    // Category Chart Configuration
+    var categoryChartConfig = {
+        ...baseConfig,
+        colors: ['#4169E1', '#FFD700', '#228B22', '#FF69B4'],
+        labels: ['Total Category', 'Zero', 'Active', 'Inactive'],
+        series: [@Model.TotalCategory, 0, @Model.ActiveCategory, @Model.InActiveCategory],
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    };
+    var categoryChart = new ApexCharts(document.querySelector("#donut-chart"), categoryChartConfig);
+    categoryChart.render();
+
+    // SubCategory Chart Configuration
+    var subCategoryChartConfig = {
+        ...baseConfig,
+        colors: ['#EE82EE', '#FF7F50', '#00BFFF', '#4B0082'],
+        labels: ['Total SubCategory', 'Zero', 'Active', 'Inactive'],
+        series: [@Model.TotalSubCategory, 0, @Model.ActiveSubCategory, @Model.InActiveSubCategory],
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    };
+    var subCategoryChart = new ApexCharts(document.querySelector("#subdonut-chart"), subCategoryChartConfig);
+    subCategoryChart.render();
+
+    // Product Chart Configuration
+    var productChartConfig = {
+        ...baseConfig,
+        colors: ['#808000', '#DDA0DD', '#FA8072', '#40E0D0'],
+        labels: ['Total Product', 'Zero', 'Active', 'Inactive'],
+        series: [@Model.TotalProduct, 0, @Model.ActiveProduct, @Model.InActiveProduct],
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    };
+    var productChart = new ApexCharts(document.querySelector("#Proddonut-chart"), productChartConfig);
+    productChart.render();
+</script>

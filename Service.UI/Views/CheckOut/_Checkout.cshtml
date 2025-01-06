@@ -1,0 +1,139 @@
+﻿@model OrderPlacedModel
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+<div class="checkbox-form mb-sm-40">
+    <form id="frmdataSave">
+        <h3>Billing Details</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="country-select clearfix mb-30">
+                    <label>Country <span class="text-danger" id="TEXTCountry">*</span></label>
+                    <select asp-for="Country" class="wide">
+                        @if (ViewBag.Countries != null)
+                        {
+                            foreach (var country in ViewBag.Countries)
+                            {
+                                <option value="@country.Value.Country">@country.Value.Country</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-12">
+                <div class="checkout-form-list mb-30">
+                    <label>Town / City <span class="text-danger" id="TEXTCity">*</span></label>
+                    <input asp-for="City" type="text" placeholder="Town / City" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="checkout-form-list">
+                    <label>Address <span class="text-danger" id="TEXTAddress">*</span></label>
+                    <input asp-for="Address" type="text" placeholder="Street address" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="checkout-form-list mb-30">
+                    <label>State / Province <span class="text-danger" id="TEXTState">*</span></label>
+                    <input asp-for="State" type="text" placeholder="" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="checkout-form-list mb-30">
+                    <label>Postcode / Zip <span class="text-danger" id="TEXTZipCode">*</span></label>
+                    <input asp-for="ZipCode" type="text" placeholder="Postcode / Zip" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="checkout-form-list mb-30">
+                    <label>Email Address <span class="text-danger" id="TEXTEmail">*</span></label>
+                    <input asp-for="Email" type="email" placeholder="" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="checkout-form-list mb-30">
+                    <label>Phone  <span class="text-danger" id="TEXTContact">*</span></label>
+                    <input asp-for="Contact" type="text" placeholder="Phone Number" />
+                </div>
+            </div>
+
+        </div>
+        <div class="different-address">
+
+            <div class="order-notes">
+                <div class="checkout-form-list">
+                    <label>Order Notes <span class="text-danger" id="TEXTOrderNote">*</span></label>
+                    <textarea asp-for="OrderNote" id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <div class="buttons-cart">
+                 <input type="submit" value="Order NOw" />
+            </div>
+        </div>
+    </form>
+ 
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    $(document).ready(function(){
+        Savedata();
+    })
+    function Savedata() {
+        $('#frmdataSave').submit(function (event) {
+            debugger;
+            event.preventDefault();
+            if (Validation()) {
+            var formdata = new FormData(document.getElementById('frmdataSave'));
+            $.ajax({
+                type: 'POST',
+                url: '/CheckOut/Savedata',
+                processData: false,
+                contentType: false,
+                data: formdata,
+                success: function (res) {
+                    if (res == 1) {
+                        toastr.success("Your Order has been Received!.Email Send to Your Account");
+                    } else {
+                        toastr.error("Order not Received.");
+                    }
+                }
+
+            })
+
+            }
+        })
+    }
+    function Validation() {
+        debugger
+        var isValid = true;
+
+        $('form').find(':input:not([type="hidden"]):not([type="button"]):not([name="poscats"]):not([name="password"]):not([name="email"]):not([name="message"]):not([name="email"]):not([name="search"])').each(function () {
+        
+            debugger
+            var value = $(this).val();
+            var name = $(this).attr('name');
+
+            $('#TEXT' + name).text('');
+
+            if (value === "" && name !== undefined) {
+                $('#TEXT' + name).text(name + ' is required, please fill it.');
+                isValid = false;
+            }
+        });
+        var password = $('#pwd').val();
+        var confirmPassword = $('#pwd-confirm').val();
+
+        if (password !== confirmPassword) {
+            $('#TEXTconformpassword').text('Passwords do not match, please try again.');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+</script>

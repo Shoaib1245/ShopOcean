@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "H2AswXKvSOxsnZeAW60mRN1JffckkqakRt3Vfa3gFoU=",
+  "Source": "Service.Admin.APIs",
+  "BasePath": "_content/Service.Admin.APIs",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

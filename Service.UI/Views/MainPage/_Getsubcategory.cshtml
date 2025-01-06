@@ -1,0 +1,42 @@
+﻿@model List<Service.UI.Models.SubCategoryModel>
+
+<style>
+   
+    .imagee {
+        width: 221px;
+        height: 221px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+</style>
+@foreach (var sub in Model.Take(4))
+{
+    <div class="single-product col-md-3">
+        <!-- Product Image Start -->
+        <div class="pro-img">
+            <a href="product.html">
+                <img class="imagee" src="@sub.SubCategoryImage" alt="single-product">
+                <img class="secondary-img" @*style="height:221px; width:221px" !important*@ src="/FrontEndAssets/img/products/18.jpg" alt="single-product">
+            </a>
+            <a href="#" class="quick_view" data-bs-toggle="modal" data-bs-target="#myModal" data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View"><i class="lnr lnr-magnifier"></i></a>
+        </div>
+        <!-- Product Image End -->
+        <!-- Product Content Start -->
+        <div class="pro-content">
+            <div class="pro-info">
+                <h4><a href="product.html">@sub.SubCategoryName</a></h4>
+               @* <p><span class="price">$84.45</span></p>*@
+            </div>
+            <div class="pro-actions">
+                <div class="actions-primary">
+                    <a href="/Shop/Index?Id=@sub.Id" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart">View ALL Product</a>
+                </div>
+                <div class="actions-secondary">
+                    <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Compare"><i class="lnr lnr-sync"></i> <span>Add To Compare</span></a>
+                    <a href="wishlist.html" data-bs-toggle="tooltip" data-bs-placement="top" title="WishList"><i class="lnr lnr-heart"></i> <span>Add to WishList</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Product Content End -->
+    </div>
+}

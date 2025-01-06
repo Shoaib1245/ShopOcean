@@ -1,0 +1,73 @@
+﻿ @model Service.UI.Models.AlldataModel
+ <!-- Reviews Start -->
+<div class="review border-default universal-padding">
+    <div class="group-title">
+        <h2>Customer Reviews</h2>
+    </div>
+    <ul class="review-list">
+        <!-- Single Review List Start -->
+        @foreach (var item in Model.ReviewAndComments)
+        {
+            <li>
+                <div class="review-item">
+                    <h4>@item.CustomerName</h4> <!-- Customer Name -->
+                    @if (item.Rating == "1")
+                    {
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                    }
+                    else   @if (item.Rating == "2")
+                    {
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                    }
+                    else   @if (item.Rating == "3")
+                    {
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                    }
+                    else   @if (item.Rating == "4")
+                    {
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                    }
+                    else   @if (item.Rating == "5")
+                    {
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    }
+
+                    <p>@item.Comments!</p> <!-- Comments -->
+                    <img src="@item.Image" alt="Product Image" style="width: 100px; height: auto;"> <!-- Product Image -->
+                </div>
+            </li>
+        }
+
+    </ul>
+</div>
+<!-- Reviews End -->

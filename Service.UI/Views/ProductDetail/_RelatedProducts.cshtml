@@ -1,0 +1,77 @@
+﻿@model List<Service.UI.Models.ProductModel>
+@*<link href="~/path-to-your-css-file.css" rel="stylesheet" />*@
+<style>
+    .imagee {
+        width: 221px;
+        height: 221px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+</style>
+
+        <!-- Single Product Start -->
+        @foreach (var item in Model.Take(8))
+    {
+        <div class="single-product col-md-3">
+            <!-- Product Image Start -->
+            <div class="pro-img">
+                <a href="product.html">
+                <img class="imagee" style="height:269px; width:269px" !important src="@item.Image.Split(',')[0]" alt="single-product">
+                <img class="secondary-img" style="height:269px; width:269px" !important src="@item.Image.Split(',')[1]" alt="single-product">
+                </a>
+                <a href="#" class="quick_view" data-bs-toggle="modal" data-bs-target="#myModal" data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View"><i class="lnr lnr-magnifier"></i></a>
+            </div>
+            <!-- Product Image End -->
+            <!-- Product Content Start -->
+            <div class="pro-content">
+                <div class="pro-info">
+                    <h4><a href="product.html">@item.ProductName</a></h4>
+                    <p><span class="price">$@item.Prices.Split(',')[0]</span></p>
+                </div>
+                <div class="pro-actions">
+                    <div class="actions-primary">
+                    <a href="/ProductDetail/Index?id=@item.Id" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart"> + Add To Cart</a>
+                    </div>
+                    <div class="actions-secondary">
+                        <a href="compare.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Compare"><i class="lnr lnr-sync"></i> <span>Add To Compare</span></a>
+                    <a href="#" onclick="AddWishlist(Discount=@item.Discount,ProductId=@item.Id,Price=@(Math.Round(Convert.ToDecimal(item.Prices.Split(',')[0]) * (1 - (Convert.ToDecimal(item.Discount / 100m))), 2)))" data-bs-toggle="tooltip" data-bs-placement="top" title="WishList"><i class="lnr lnr-heart"></i> <span>Add to WishList</span></a>
+                    </div>
+                </div>
+            </div>
+        @if (item.IsNewArrival == true)
+        {
+            <!-- Product Content End -->
+            <span class="sticker-new">new</span>
+        }
+        </div>
+        <!-- Single Product End -->
+    }
+  
+
+        <!-- Single Product End -->
+@*    </div>
+    <!-- Hot Deal Product Active End -->
+
+</div>*@
+<script src="~/assets/jquery.js"></script>
+<script>
+    var J$ = jQuery.noConflict();
+</script>
+<script>
+    function AddWishlist(Discount, ProductId, Price) {
+        J$.ajax({
+            type: 'post',
+            url: '/WishList/SaveWishList',
+            data: { DIscount: Discount, ProductId: ProductId, Price: Price },
+            success: function (res) {
+                if (res == 1) {
+                    toastr.success("Product Add to WishList!");
+                }
+                else {
+                    window.location.href = "/CustomerRegistration/CustomerLogin";
+                }
+
+            }
+        })
+    }
+</script>

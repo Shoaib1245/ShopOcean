@@ -1,0 +1,99 @@
+﻿@model List<Service.UI.Models.CartModel>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <!-- Form Start -->
+            <form action="#">
+                <!-- Table Content Start -->
+                <div class="table-content table-responsive mb-45">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="product-thumbnail">Image</th>
+                                <th class="product-name">Product</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-subtotal">Total</th>
+                                <th class="product-remove">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="product-thumbnail">
+                                        <a href="#"><img src="@item.Image.Split(',')[0]" alt="cart-image" /></a>
+                                    </td>
+                                    <td class="product-name"><a href="#">@item.ProductName</a></td>
+                                    <td class="product-price"><span class="amount">@item.Price</span></td>
+                                    <td class="product-quantity"><input type="text" value="@item.Quantity" /></td>
+                                    <td class="product-subtotal">@item.TotalPrice</td>
+                                    <td class="product-remove"> <a href="#" onclick="DeleteFromCart(@item.ProductId)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                </tr>
+                            }
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Table Content Start -->
+                <div class="row">
+                    <!-- Cart Button Start -->
+                    <div class="col-md-8 col-sm-12">
+                        <div class="buttons-cart">
+                           @* <input type="submit" value="Update Cart" />*@
+                            <a href="/Shop/Index">Continue Shopping</a>
+                        </div>
+                    </div>
+                    <!-- Cart Button Start -->
+                    <!-- Cart Totals Start -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="cart_totals float-md-right text-md-right">
+                            <h2>Cart Totals</h2>
+                            <br />
+                            <table class="float-md-right">
+                                <tbody>
+
+
+                                    <tr class="order-total">
+                                        <th>Total</th>
+                                        <td>
+                                            <strong><span class="amount">$@Model.Sum(a=>a.TotalPrice)</span></strong>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="wc-proceed-to-checkout">
+                                <a href="/CheckOut/Index">Proceed to Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cart Totals End -->
+                </div>
+                <!-- Row End -->
+            </form>
+            <!-- Form End -->
+        </div>
+    </div>
+    <!-- Row End -->
+</div>
+<script>
+    function DeleteFromCart(id) {
+        $.ajax({
+            type: 'post',
+            url: '/Cart/DeletefromCart',
+            data: { id: id },
+            success: function (res) {
+                if (res == 1) {
+                    toastr.error("Item Deleted from Cart");
+                    CartShoww();
+                } else {
+                    toastr.error("Data not Deleted.");
+                }
+
+            }
+        })
+    }
+</script>

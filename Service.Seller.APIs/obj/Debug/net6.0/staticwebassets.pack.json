@@ -1,0 +1,545 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\1.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\10.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\11.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\12.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\120730-OQ2KMK-949.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\120730-OQ2KMK-949.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\126037-OR1F8F-831.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\126037-OR1F8F-831.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\13.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\15 - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\15 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\15.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\16.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\17.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\2.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\21.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\22.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\222.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\222.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\23.jpg.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\23.jpg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\2343.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\2343.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\24.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\26.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\27.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\28.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\3.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\31.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\33.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\37.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\37.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\38.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\38.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\4.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\40.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\40.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\41.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\41.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\42.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\43.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\43.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\5.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\6.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\7.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\8.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\9.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\Screenshot 2024-08-06 215415.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\Screenshot 2024-08-06 215415.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\Screenshot 2024-08-06 215427.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\Screenshot 2024-08-06 215427.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\Screenshot 2024-08-06 215548.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\Screenshot 2024-08-06 215548.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\Screenshot 2024-08-06 215602.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\Screenshot 2024-08-06 215602.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\delete-user-11.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\delete-user-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\delete-user-12.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\delete-user-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\drag-1.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\drag-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\drag-2.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\drag-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\drag-4.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\drag-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\ecommerce-6.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\ecommerce-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\front-view-wooden-spoons-with-pepper-shaker-dark-wall-photo-color-cuisine-seasoning-salt-food-cutlery_179666-17649.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\front-view-wooden-spoons-with-pepper-shaker-dark-wall-photo-color-cuisine-seasoning-salt-food-cutlery_179666-17649.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\g-7.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\g-7.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\g-8.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\g-8.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\girl-3.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\girl-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\grid-blog-style-1.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\grid-blog-style-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\grid-blog-style-2.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\grid-blog-style-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\grid-blog-style-3.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\grid-blog-style-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\grid-blog-style-4.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\grid-blog-style-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\masonry-blog-style-3.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\masonry-blog-style-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\money-bag.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\money-bag.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\motorcycle-8192323_1280.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\motorcycle-8192323_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\p7.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\p7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\p9.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\p9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-alteredsnaps-14517273.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-alteredsnaps-14517273.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-amar-28097268.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-amar-28097268.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-annpoan-5797997 - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-annpoan-5797997 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-annpoan-5797997.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-annpoan-5797997.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-baran-robin-76507255-27779286.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-baran-robin-76507255-27779286.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-cottonbro-4065619 - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-cottonbro-4065619 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-cottonbro-4065619.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-cottonbro-4065619.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-cottonbro-4065864 - Copy - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-cottonbro-4065864 - Copy - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-cottonbro-4065864 - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-cottonbro-4065864 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-cottonbro-4065864.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-cottonbro-4065864.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-efrem-efre-2786187-27460906.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-efrem-efre-2786187-27460906.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-energepic-com-27411-313690 - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-energepic-com-27411-313690 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-energepic-com-27411-313690.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-energepic-com-27411-313690.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-essow-k-251295-1042143.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-essow-k-251295-1042143.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-ethan-swartz-1267418871-27509020.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-ethan-swartz-1267418871-27509020.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-farias-feijo-fotos-2910093-27874906.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-farias-feijo-fotos-2910093-27874906.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-fotios-photos-1006293 - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-fotios-photos-1006293 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-fotios-photos-1006293.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-fotios-photos-1006293.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-fotios-photos-1092644.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-fotios-photos-1092644.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-goumbik-577210.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-goumbik-577210.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-hammad-khalid-155549-1786433.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-hammad-khalid-155549-1786433.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-imjimmyqian-1710481.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-imjimmyqian-1710481.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-jakubzerdzicki-16033842.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-jakubzerdzicki-16033842.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-jessbaileydesign-788946.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-jessbaileydesign-788946.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-jonathan-pagaoa-46448199-14998050.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-jonathan-pagaoa-46448199-14998050.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-jonathan-pagaoa-46448199-14998052.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-jonathan-pagaoa-46448199-14998052.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-lastly-699122.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-lastly-699122.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-lillysommer-3992776.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-lillysommer-3992776.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-luckysam-50614.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-luckysam-50614.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-madebymath-249324.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-madebymath-249324.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-marcin-porebski-1192855350-28028331.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-marcin-porebski-1192855350-28028331.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-noah-erickson-97554-404280.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-noah-erickson-97554-404280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-pavel-danilyuk-7191162.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-pavel-danilyuk-7191162.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-pavel-danilyuk-7191172.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-pavel-danilyuk-7191172.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-pixabay-248526.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-pixabay-248526.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-pixabay-4158.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-pixabay-4158.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-polina-tankilevitch-4523023.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-polina-tankilevitch-4523023.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-regeci-27262389.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-regeci-27262389.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-serhatturan-27626728.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-serhatturan-27626728.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-shndgd-27797965.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-shndgd-27797965.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-tima-miroshnichenko-7205441.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-tima-miroshnichenko-7205441.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-tima-miroshnichenko-7205447.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-tima-miroshnichenko-7205447.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-tobias-dziuba-319638-927629.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-tobias-dziuba-319638-927629.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-tracy-le-blanc-67789-607812.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-tracy-le-blanc-67789-607812.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\pexels-troopper84-27758773.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\pexels-troopper84-27758773.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\photo-1473186505569-9c61870c11f9.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\photo-1473186505569-9c61870c11f9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-10.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-11.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-12 - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-12 - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-12.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-13.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-14.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-18.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-4.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-5.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-7.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-8.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-9.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-camera.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-camera.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-headphones.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-headphones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-laptop - Copy.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-laptop - Copy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-laptop.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-laptop.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\product-watch.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\product-watch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\profile-19.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\profile-19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\profile-24.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\profile-24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\profile-25.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\profile-25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\profile-28.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\profile-28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\profile-29.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\profile-29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\profile-34.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\profile-34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\profile-6.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\profile-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\ronaldo.png",
+      "PackagePath": "staticwebassets\\ShopOcean\\ronaldo.png"
+    },
+    {
+      "Id": "C:\\Users\\Joher\\source\\repos\\ShopOcean\\Service.Seller.APIs\\wwwroot\\ShopOcean\\tl-2.jpg",
+      "PackagePath": "staticwebassets\\ShopOcean\\tl-2.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Service.Seller.APIs.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Service.Seller.APIs.props",
+      "PackagePath": "build\\Service.Seller.APIs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Service.Seller.APIs.props",
+      "PackagePath": "buildMultiTargeting\\Service.Seller.APIs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Service.Seller.APIs.props",
+      "PackagePath": "buildTransitive\\Service.Seller.APIs.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
